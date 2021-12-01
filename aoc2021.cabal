@@ -1,0 +1,31 @@
+cabal-version:       >=1.10
+name:                aoc2021
+version:             0.1.0.0
+license-file:        LICENSE
+author:              Josh Miller
+maintainer:          notjoshmiller@gmail.com
+build-type:          Simple
+extra-source-files:  README.md
+
+library advent
+  build-depends:       
+    base < 5,
+    attoparsec,
+    bytestring,
+    containers,
+    split,
+    text,
+    unordered-containers,
+    vector
+  default-language:    
+    Haskell2010
+  hs-source-dirs:    
+    src
+  exposed-modules:
+    Advent
+  other-modules:
+    Advent.Day1
+    Advent.Prelude
+  default-extensions: 
+    NoImplicitPrelude,
+    OverloadedStrings

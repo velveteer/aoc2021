@@ -1,0 +1,1 @@
+-S --run=":! cabal exec -- doctest src"
