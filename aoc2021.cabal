@@ -25,6 +25,7 @@ library advent
     Advent
   other-modules:
     Advent.Day1
+    Advent.Day2
     Advent.Prelude
   default-extensions: 
     NoImplicitPrelude,
