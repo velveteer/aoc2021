@@ -16,7 +16,7 @@ import           Data.Either         as Export
 import           Data.Function       as Export (on)
 import           Data.Functor        as Export ((<&>))
 import           Data.List           as Export
-import           Data.List.Split     as Export (splitOn)
+import           Data.List.Split     as Export
 import           Data.Map.Strict     as Export (Map)
 import           Data.Maybe          as Export
 import           Data.Ord            as Export (Down (..), comparing)
