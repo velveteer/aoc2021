@@ -15,7 +15,7 @@ import           Data.Char           as Export (digitToInt, isDigit)
 import           Data.Either         as Export
 import           Data.Function       as Export (on)
 import           Data.Functor        as Export ((<&>))
-import           Data.List           as Export (foldl', partition, tails)
+import           Data.List           as Export
 import           Data.List.Split     as Export (splitOn)
 import           Data.Map.Strict     as Export (Map)
 import           Data.Maybe          as Export
