@@ -28,6 +28,7 @@ library advent
     Advent.Day2
     Advent.Day3
     Advent.Day4
+    Advent.Day5
     Advent.Prelude
   default-extensions: 
     NoImplicitPrelude,

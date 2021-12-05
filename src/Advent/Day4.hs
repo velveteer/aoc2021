@@ -11,15 +11,15 @@ import           Advent.Prelude
 day4 :: IO ()
 day4 = do
   putStrLn "day 4"
-  input <- preprocess <$> load "day4.txt"
+  input <- parse <$> load "day4.txt"
   print $ uncurry day4a input
   print $ uncurry day4b input
 
-preprocess :: [String] -> ([String], [[String]])
-preprocess (nums:bs) =
-  let toCall = splitOn "," nums
-      boards = chunksOf 5 $ filter (/= "") bs
-   in (toCall, boards)
+parse :: [String] -> ([String], [[String]])
+parse (nums:bs) = (toCall, boards)
+  where
+    toCall = splitOn "," nums
+    boards = chunksOf 5 $ filter (/= "") bs
 
 day4Example :: [String]
 day4Example =
@@ -45,7 +45,7 @@ day4Example =
   ]
 
 -- | Solve Day 4 Part One
--- >>> uncurry day4a (preprocess day4Example)
+-- >>> uncurry day4a (parse day4Example)
 -- 4512
 day4a :: [String] -> [[String]] -> Int
 day4a toCall boards = solve winning called
@@ -68,7 +68,7 @@ solve winning called =
   (sum . asInts $ (concatMap words (last winning)) \\ called) * read (head called)
 
 -- | Solve Day 4 Part Two
--- >>> uncurry day4b (preprocess day4Example)
+-- >>> uncurry day4b (parse day4Example)
 -- 1924
 day4b :: [String] -> [[String]] -> Int
 day4b toCall boards = solve winning called
