@@ -12,8 +12,6 @@ module Advent.Day6 where
 import           Advent.Prelude
 import qualified Data.IntMap.Strict as Map
 
-import Debug.Trace
-
 day6 :: IO ()
 day6 = do
   putStrLn "day 6"
