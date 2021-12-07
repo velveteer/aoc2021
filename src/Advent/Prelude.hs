@@ -6,20 +6,20 @@ module Advent.Prelude
   , histogram
   ) where
 
-import           Prelude             as Export hiding (pred)
+import           Prelude             as Export
 
 import           Control.Applicative as Export
 import           Control.Arrow       as Export
 import           Control.Monad       as Export
 import           Data.Char           as Export (digitToInt, isDigit)
 import           Data.Either         as Export
-import           Data.Function       as Export (on)
+import           Data.Function       as Export
 import           Data.Functor        as Export ((<&>))
 import           Data.List           as Export
 import           Data.List.Split     as Export
 import           Data.Map.Strict     as Export (Map)
 import           Data.Maybe          as Export
-import           Data.Ord            as Export (Down (..), comparing)
+import           Data.Ord            as Export
 import           Data.Set            as Export (Set)
 import           Data.Text           as Export (Text, pack, unpack)
 import           Text.Read           as Export (readMaybe)

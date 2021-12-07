@@ -10,6 +10,7 @@ extra-source-files:  README.md
 library advent
   build-depends:       
     base < 5,
+    array,
     attoparsec,
     bytestring,
     containers,
@@ -23,13 +24,14 @@ library advent
     src
   exposed-modules:
     Advent
+    Advent.Prelude
   other-modules:
     Advent.Day1
     Advent.Day2
     Advent.Day3
     Advent.Day4
     Advent.Day5
-    Advent.Prelude
+    Advent.Day6
   default-extensions: 
     NoImplicitPrelude,
     OverloadedStrings
