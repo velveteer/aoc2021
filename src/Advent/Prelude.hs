@@ -9,8 +9,10 @@ module Advent.Prelude
 import           Prelude             as Export
 
 import           Control.Applicative as Export
+import           Control.Arrow       as Export ((&&&))
 import           Control.Monad       as Export
 import           Data.Bifunctor      as Export
+import           Data.Bitraversable  as Export
 import           Data.Char           as Export (digitToInt, isDigit)
 import           Data.Either         as Export
 import           Data.Function       as Export
