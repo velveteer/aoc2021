@@ -53,23 +53,24 @@ day10b :: [String] -> Int
 day10b strs = sort comps !! (length comps `div` 2)
   where
     go s (x:xs) | x `elem` openers = go ((closer x):s) xs
-    go (s:ss) (x:xs) | x == s = go ss xs
+    go (s:ss) (x:xs) | Just x == s = go ss xs
     go s [] = Just s
     go _ _ = Nothing
-    comps = mapMaybe (fmap score . go []) strs
+    comps = mapMaybe (fmap (score . catMaybes) . go []) strs
     scores = [(')', 1), (']', 2), ('}', 3), ('>', 4)]
     score = foldl' calc 0
     calc acc c = (acc * 5) + (fromMaybe 0 $ lookup c scores)
 
-closer :: Char -> Char
+closer :: Char -> Maybe Char
 closer = \case
-  '(' -> ')'
-  '[' -> ']'
-  '{' -> '}'
-  '<' -> '>'
+  '(' -> Just ')'
+  '[' -> Just ']'
+  '{' -> Just '}'
+  '<' -> Just '>'
+  _   -> Nothing
 
 closes :: Char -> Char -> Bool
-closes a b = b == closer a
+closes a b = Just b == closer a
 
 openers :: String
 openers = "[({<"

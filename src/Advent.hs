@@ -10,3 +10,4 @@ import           Advent.Day7 as Export
 import           Advent.Day8 as Export
 import           Advent.Day9 as Export
 import           Advent.Day10 as Export
+import           Advent.Day11 as Export

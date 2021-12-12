@@ -36,6 +36,7 @@ library advent
     Advent.Day8
     Advent.Day9
     Advent.Day10
+    Advent.Day11
   default-extensions: 
     NoImplicitPrelude,
     OverloadedStrings
