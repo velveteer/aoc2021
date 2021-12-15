@@ -16,6 +16,7 @@ library advent
     containers,
     split,
     text,
+    transformers,
     unordered-containers,
     vector
   default-language:    
@@ -37,6 +38,8 @@ library advent
     Advent.Day9
     Advent.Day10
     Advent.Day11
+    Advent.Day12
+    Advent.Day13
   default-extensions: 
     NoImplicitPrelude,
     OverloadedStrings
